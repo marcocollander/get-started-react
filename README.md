@@ -4,9 +4,20 @@
 
 Element React `section` zawierający inny potomny element React `div`, posługując się składnią `JSX`, definiujemy
 następująco:
+ 
+> Uwzględniając, że jeśli umieszczamy kod w wielu liniach jak w poniższym wyrażeniu i chcemy, aby interpreter traktował 
+> go jako jedno integralne wyrażenie to umieszczamy go w nawiasach okrągłych, zabezpieczając jednocześnie się przed 
+> automatycznym
+> [wstawianiem średnika](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
 
 ```jsx
-const elem = <section><div id="app" className="app" key="index">Hello world!</div></section>
+const elem = (
+  <section>
+    <div id="app" className="app" key="index">
+      Hello world!
+    </div>
+  </section>
+);
 ```
 
 Powyższy kod `JSX` zostanie przez kompilator `Babel` skompilowany do składni `JavaScript` jak niżej:
@@ -22,14 +33,14 @@ const element = /*#__PURE__*/ React.createElement(
     {
       id: "app",
       key: "index",
-      className: "app"
+      className: "app",
     },
     "Pierwszy"
   )
 );
 ```
 
-Jeśli wyświetlimy w konsoli: 
+Jeśli wyświetlimy w konsoli:
 
 ```javascript
 console.log(elem);
@@ -39,7 +50,7 @@ console.log(element);
 To otrzymamy ten sam wydruk:
 
 ```console
-{  
+{
     $$typeof: Symbol(react.element)
     "type": "section",
     "key": null,
