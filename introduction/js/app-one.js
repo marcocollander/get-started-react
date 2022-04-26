@@ -1,12 +1,3 @@
-// import * as ReactDOM from "react-dom/client";
-// import React from "react";
-// import ReactDOM from "react-dom";
-
-// console.log(React);
-// console.log(ReactDOM);
-
-// console.log(ReactDOMClient);
-
 const elem = (
   <section>
     <div id="app" key="index" className="app">
