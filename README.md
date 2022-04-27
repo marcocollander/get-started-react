@@ -2,7 +2,7 @@
 
 # Jak działa React
 
-Aplikacje z użyciem biblioteki JavaScript zwanej, i bardzo ostatnio popularnej, React tworwzy się przede wszystkim wykorzystując rozszerzenie języka JavaScript JSX, które jest oparte na na znacznikach podobnych do znaczników HTML. Jednakże aby poznać jak działa platforma React, należy poznać jej najmniejsze jednostki składowe czyli jej elementy. Następnie należy poznać komponenty, które składają się z innych komponentów i elementów.
+Aplikacje z użyciem biblioteki JavaScript zwanej, i bardzo ostatnio popularnej, React tworzy się przede wszystkim wykorzystując rozszerzenie języka JavaScript JSX, które jest oparte na znacznikach podobnych do znaczników HTML. Jednakże aby poznać jak działa platforma React, należy poznać jej najmniejsze jednostki składowe czyli jej elementy. Następnie należy poznać komponenty, które składają się z innych komponentów i elementów.
 
 ## Elementy React
 
@@ -18,8 +18,6 @@ Kiedy użytkownik porusza się po takiej stronie, `JavaScript` niszczy poprzedni
 Model `DOM` biblioteki `React` składa się z elementów `Reacta`. Element Reacta to opis przedstawiający, jak powinien wyglądać element modelu `DOM`.
 
 ## Jak powstają elementy React?
-
-Mamy dwie możliwości tworzenia elementów React: czysty JS oraz JSX.
 Elementy React można tworzyć na dwa sposoby:
 
 1. Za pomocą składni JavaScript.
@@ -44,8 +42,7 @@ Podczas generowania strony `React` skonwertuje element utworzony za pomocą meto
 
 Element biblioteki `React` to zwykły literał obiektowy `JavaScriptu` wskazujący jej sposób utworzenia elementu modelu DOM.
 
->Koncentrujemy się na obiekcie zwróconym przez funkcję React.createElement(). Te elementy nie są tworzone >ręcznie przez programistę, lecz za pomocą tej funkcji.
-
+> Koncentrujemy się na obiekcie zwróconym przez funkcję React.createElement(). Te elementy nie są tworzone >ręcznie przez programistę, lecz za pomocą tej funkcji.
 
 Element React `section` zawierający inny potomny element React `div`, posługując się składnią `JSX`, definiujemy następująco:
 
@@ -129,34 +126,36 @@ const list = (
     <li>ListItem4</li>
     <li>ListItem5</li>
   </ul>
-)
+);
 ```
 
 Po transpilacji otrzymamy
 
 ```javascript
-"use strict";
+'use strict';
 
 const list = /*#__PURE__*/ React.createElement(
-  "ul",
+  'ul',
   null,
-  /*#__PURE__*/ React.createElement("li", null, "ListItem1"),
-  /*#__PURE__*/ React.createElement("li", null, "ListItem2"),
-  /*#__PURE__*/ React.createElement("li", null, "ListItem3"),
-  /*#__PURE__*/ React.createElement("li", null, "ListItem4"),
-  /*#__PURE__*/ React.createElement("li", null, "ListItem5")
+  /*#__PURE__*/ React.createElement('li', null, 'ListItem1'),
+  /*#__PURE__*/ React.createElement('li', null, 'ListItem2'),
+  /*#__PURE__*/ React.createElement('li', null, 'ListItem3'),
+  /*#__PURE__*/ React.createElement('li', null, 'ListItem4'),
+  /*#__PURE__*/ React.createElement('li', null, 'ListItem5')
 );
 ```
 
 ```console
-$$typeof: Symbol(react.element)
+{$$typeof: Symbol(react.element)
 key: null
 props:
 children: Array(5)
 0:
 $$typeof: Symbol(react.element)
 key: null
-props: {children: 'ListItem1'}
+props:
+children: "ListItem1"
+[[Prototype]]: Object
 ref: null
 type: "li"
 _owner: null
@@ -179,11 +178,6 @@ _self: null
 _source: null
 [[Prototype]]: Object
 ```
-
-
-
-
-
 
 Bibliografia:
 
