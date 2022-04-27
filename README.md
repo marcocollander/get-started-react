@@ -144,7 +144,7 @@ const list = /*#__PURE__*/ React.createElement(
   /*#__PURE__*/ React.createElement('li', null, 'ListItem5')
 );
 ```
-
+Obiekt list, który jest wartością zwrócaną przez funkcję React.createElement() ma postać:
 ```console
 {$$typeof: Symbol(react.element)
 key: null
@@ -177,6 +177,12 @@ _store: {validated: false}
 _self: null
 _source: null
 [[Prototype]]: Object
+```
+
+Ten obiekt możemy podejrzeć w konsoli:
+
+```javascript
+console.log('');
 ```
 
 Bibliografia:
